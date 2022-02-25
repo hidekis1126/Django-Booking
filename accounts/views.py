@@ -18,7 +18,7 @@ class ProfileEditView(LoginRequiredMixin, View):
         user_data = CustomUser.objects.get(id=request.user.id)
         form = ProfileForm(
             request.POST or None,
-            initial = {
+            initial={
                 'first_name': user_data.first_name,
                 'last_name': user_data.last_name,
                 'description': user_data.description,
@@ -27,7 +27,8 @@ class ProfileEditView(LoginRequiredMixin, View):
         )
 
         return render(request, 'accounts/profile_edit.html', {
-            'form': form
+            'form': form,
+            'user_data': user_data
         })
 
     def post(self, request, *args, **kwargs):
@@ -44,7 +45,7 @@ class ProfileEditView(LoginRequiredMixin, View):
 
         return render(request, 'accounts/profile.html', {
             'form': form
-        })   
+        })  
 
 
 class LoginView(views.LoginView):

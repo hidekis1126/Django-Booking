@@ -92,20 +92,21 @@ table {
 /* base */
 
 body {
-    display: flex;
-    flex-flow: column;
-    min-height: 100vh;
+  background: #f1f1f1;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
 }
 
 main {
-    flex: 1;
+  flex: 1;
 }
 
 /* store */
 
 .storelist img {
-    height: 150px;
-    object-fit: contain;
+  height: 150px;
+  object-fit: contain;
 }
 
 /* staff */
@@ -115,5 +116,9 @@ main {
     object-fit: contain;
 }
 
+/* calendar */
 
-
+.calendar img {
+    height: 150px;
+    object-fit: contain;
+}
